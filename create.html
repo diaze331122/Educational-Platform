@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Purple Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/vendors/css/vendor.bundle.addons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/index.html"><img src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/index.html"><img src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="mdi mdi-menu"></span>
+        </button>
+        <div class="search-field d-none d-md-block">
+          <form class="d-flex align-items-center h-100" action="#">
+            <div class="input-group">
+              <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>                
+              </div>
+              <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+            </div>
+          </form>
+        </div>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <div class="nav-profile-img">
+                <img src="images/faces/face1.jpg" alt="image">
+                <span class="availability-status online"></span>             
+              </div>
+              <div class="nav-profile-text">
+                <p class="mb-1 text-black">John Doe</p>
+              </div>
+            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-account mr-2 text-primary"></i>
+                Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-logout mr-2 text-primary"></i>
+                Signout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item d-none d-lg-block full-screen-link">
+            <a class="nav-link">
+              <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="mdi mdi-email-outline"></i>
+              <span class="count-symbol bg-warning"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <h6 class="p-3 mb-0">Messages</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/images/faces/face4.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+                  <p class="text-gray mb-0">
+                    1 Minutes ago
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/images/faces/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+                  <p class="text-gray mb-0">
+                    15 Minutes ago
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/images/faces/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+                  <p class="text-gray mb-0">
+                    18 Minutes ago
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="mdi mdi-bell-outline"></i>
+              <span class="count-symbol bg-danger"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <h6 class="p-3 mb-0">Notifications</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="mdi mdi-calendar"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                  <p class="text-gray ellipsis mb-0">
+                    Just a reminder that you have an event today
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="mdi mdi-settings"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                  <p class="text-gray ellipsis mb-0">
+                    Update dashboard
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="mdi mdi-link-variant"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                  <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                  <p class="text-gray ellipsis mb-0">
+                    New admin wow!
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+            </div>
+          </li>
+          <li class="nav-item nav-logout d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="mdi mdi-power"></i>
+            </a>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="mdi mdi-format-line-spacing"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close mdi mdi-close"></i>
+        <ul class="nav nav-tabs bg-gradient-primary" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove mdi mdi-close-circle-outline"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove mdi mdi-close-circle-outline"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove mdi mdi-close-circle-outline"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove mdi mdi-close-circle-outline"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove mdi mdi-close-circle-outline"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="events py-4 border-bottom px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="mdi mdi-circle-outline text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page</p>
+              <p class="text-gray mb-0">build a js based app</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="mdi mdi-circle-outline text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">FRIENDS</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+     <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+              <div class="nav-profile-image">
+                <img src="images/faces/face1.jpg" alt="profile">
+                <span class="login-status online"></span> <!--change to offline or busy as needed-->              
+              </div>
+              <div class="nav-profile-text d-flex flex-column">
+                <span class="font-weight-bold mb-2">John Doe</span>
+                <span class="text-secondary text-small">Teacher</span>
+              </div>
+              <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/index.html">
+              <span class="menu-title">Dashboard</span>
+              <i class="mdi mdi-home menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false" aria-controls="page-layouts">
+              <span class="menu-title">Classroom</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-school menu-icon"></i>
+            </a>
+            <div class="collapse" id="page-layouts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/layout/boxed-layout.html">Add student</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/layout/rtl-layout.html">Remove student</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/layout/horizontal-menu-1.html">Classroom information</a></li>            
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
+              <span class="menu-title">Games</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-google-controller menu-icon"></i>
+            </a>
+            <div class="collapse" id="sidebar-layouts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/layout/compact-menu.html">Explore game templates</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/layout/sidebar-collapsed.html">Create a game</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/layout/sidebar-hidden.html">Assign games</a></li>
+			 </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-title">Tools</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-calendar-clock menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/accordions.html">Inbox</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/buttons.html">To do list</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/badges.html">Calendar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/breadcrumbs.html">Notebook</a></li>
+       
+              </ul>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi  mdi-chart-line menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/dragula.html">individual</a></li>
+                <li class="nav-item"> <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/clipboard.html">Classroom</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/pages/forms/pages/ui-features/popups.html">
+              <span class="menu-title">Chat</span>
+              <i class="mdi mdi-forum menu-icon"></i>
+            </a>
+          </li>
+          
+         
+          
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Create a game</h4>
+                  <form id="example-form" action="#">
+                    <div>
+                      <h3>Choose game</h3>
+                      <section>
+                        <h3>Select your template</h3>
+                        <div class="form-group">
+                        <label for="games">Games</label>
+    						<select class="form-control" id="games">
+      							<option>Game 1</option>
+      							<option>Game 2</option>
+     						    <option>Game 3</option>
+      							<option>Game 4</option>
+      							<option>Game 5</option>
+   							 </select>               
+                        </div>                        
+                      </section>
+                      <h3>Customize</h3>
+                      <section class="scroll">
+                        <h3>Add your content</h3>
+                        <div class="form-group">
+                          <label>Question 1</label>
+                          <input type="text" class="form-control" aria-describedby="question" placeholder="Enter your question here">
+                        </div>
+                        <div class="form-group">
+                          <label>Answers</label>
+                           <div class="col-xs-2">
+    						<input class="form-control" id="ans11" type="text" placeholder="correct answer">
+ 						  </div>
+                          <div class="col-xs-2">
+    						<input class="form-control" id="ans12" type="text" placeholder="wrong answer">
+ 						  </div>
+                          <div class="col-xs-2">
+    						<input class="form-control" id="ans13" type="text" placeholder="wrong answer">
+ 						  </div>
+                        </div>
+                       <div class="form-group">
+                          <label>Question 2</label>
+                          <input type="text" class="form-control" aria-describedby="question" placeholder="Enter your question here">
+                        </div>
+                        <div class="form-group">
+                          <label>Answers</label>
+                           <div class="col-xs-2">
+    						<input class="form-control" id="ans21" type="text" placeholder="correct answer">
+ 						  </div>
+                          <div class="col-xs-2">
+    						<input class="form-control" id="ans22" type="text" placeholder="wrong answer">
+ 						  </div>
+                          <div class="col-xs-2">
+    						<input class="form-control" id="ans23" type="text" placeholder="wrong answer">
+ 						  </div>
+                        </div>
+                        <div class="form-group">
+                          <label>Question 3</label>
+                          <input type="text" class="form-control" aria-describedby="question" placeholder="Enter your question here">
+                        </div>
+                        <div class="form-group">
+                          <label>Answers</label>
+                           <div class="col-xs-2">
+    						<input class="form-control" id="ans31" type="text" placeholder="correct answer">
+ 						  </div>
+                          <div class="col-xs-2">
+    						<input class="form-control" id="ans32" type="text" placeholder="wrong answer">
+ 						  </div>
+                          <div class="col-xs-2">
+    						<input class="form-control" id="ans33" type="text" placeholder="wrong answer">
+ 						  </div>
+                        </div>
+                      </section>
+                      <h3>Preview</h3>
+                      <section>
+                        <h3>Check your game</h3>
+                        <div class="form-group">
+                                     
+                        </div>
+                      </section>
+                      <h3>Share</h3>
+                      <section>
+                        <h3>Share this game with your students</h3>
+                        <div class="form-check">
+                          <label for="students">Students</label>
+                          <select class="form-control" id="students">
+      							<option>Student 1</option>
+      							<option>Student 2</option>
+     						    <option>Student 3</option>
+      							<option>Student 4</option>
+      							<option>All students</option>
+   							 </select>  
+                        </div>
+                      </section>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+         
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap Dash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/vendors/js/vendor.bundle.base.js"></script>
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/js/off-canvas.js"></script>
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/js/hoverable-collapse.js"></script>
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/js/misc.js"></script>
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/js/settings.js"></script>
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="file:///C|/Users/Giannis Mel/Desktop/PURPLE/purple-admin-pro/jquery/js/wizard.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
