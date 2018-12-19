@@ -1,7 +1,7 @@
 <?php
     class VerifyAccount{
         private const CHECK_EMAIL_HASH_ACT = 'SELECT * FROM USERS WHERE email = ? AND hash = ? AND active = ?';
-        private const UPDATE_ACC_ACT = "UPDATE USERS SET active = ? WHERE email = ? AND hash = ? AND active = ?";
+        private const UPDATE_ACC_ACT = "UPDATE USERS SET active = ? WHERE email = ? AND hash = ?";
         private $email;
         private $hash;
         private $active;
@@ -26,10 +26,11 @@
 
         function checkIfAccountExists(){
             $stmt = $this->conn->prepare(self::CHECK_EMAIL_HASH_ACT);
-            $stmt->bindParam("ssi",$this->username,$this->hash,$this->active);
+            $stmt->bindParam("ssi",$this->email,$this->hash,$this->active);
             $stmt->execute();
 
             if ($stmt->num_rows == 1) {
+                $this->active = 1;
                 return true;
             }else{
                 return false;
@@ -38,7 +39,7 @@
 
         function activateAccount(){
             $stmt = $this->conn->prepare(self::UPDATE_ACC_ACT);
-            $stmt->bindParam("ssi",$this->username,$this->hash,$this->active);
+            $stmt->bindParam("iss",$this->active,$this->email,$this->hash);
             $stmt->execute();
         } 
         

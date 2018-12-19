@@ -9,7 +9,7 @@
         $hash = testInput($_GET['email'],$connection);
         $active = 0;
 
-        $verify = new VerifyAccount($email,$hash,$account);
+        $verify = new VerifyAccount($email,$hash,$active,$connection);
 
         if ($verify->verify()){
             echo 'Successfully activated profile';

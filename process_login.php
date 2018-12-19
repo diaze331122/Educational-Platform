@@ -4,7 +4,8 @@
     require_once('connect_database.php');
 
     //check if all fields are not empty
-    if (isset($_POST['username']) && isset($_POST['password'])){
+    if (isset($_POST['username']) && $_POST['username'] != '' 
+    && isset($_POST['password']) && $_POST['password'] != ''){
         //connect to database and clean up posts
         $connection = new mysqli(SERVERNAME,DB_USER,DB_PASSWORD,DB);
         $username = testInput($_POST['username'],$connection);

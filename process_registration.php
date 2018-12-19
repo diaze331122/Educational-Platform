@@ -4,9 +4,12 @@
     require_once('registration.php');
 
     //check if all fields are not empty
-    if (isset($_POST['firstname']) && isset($_POST['lastname']) 
-        && isset($_POST['username']) && isset($_POST['email'])
-        && isset($_POST['password']) && isset($_POST['type'])){
+    if (isset($_POST['firstname']) && ($_POST['firstname'] != '') 
+        && isset($_POST['lastname']) && ($_POST['lastname'] != '')
+        && isset($_POST['username']) && ($_POST['username'] != '')
+        && isset($_POST['email']) && ($_POST['email'] != '')
+        && isset($_POST['password']) && ($_POST['password'] != '')
+        && isset($_POST['type']) && ($_POST['type'] != '')){
         //open database connection
         $connection = new mysqli(SERVERNAME,DB_USER,DB_PASSWORD,DB);
         //clean up input
