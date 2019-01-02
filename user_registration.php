@@ -2,8 +2,9 @@
     require_once('registration_token.php');
 
     class UserRegistration{
-        private const CHECK_USERNAME_QUERY = "SELECT * FROM Users WHERE username = ?";
-        private const CHECK_PASSWORD_QUERY = "SELECT * FROM Users WHERE password = ?";
+        private const CHECK_USERNAME_QUERY = "SELECT username FROM Users WHERE username = ?";
+        private const CHECK_PASSWORD_QUERY = "SELECT password FROM Users WHERE password = ?";
+        private const CHECK_EMAIL_QUERY = "SELECT email FROM Users WHERE email = ?";
         private const INSERT_USER_QUERY = "INSERT INTO Users(type_id,firstname,lastname,email,username,password,status)".
         "VALUES (?,?,?,?,?,?,?)";
 
@@ -28,8 +29,8 @@
         }
 
         function registerUser(){
-            //if username or password already exists, return false
-            if ($this->ifUsernameExists($this->username) || $this->ifPasswordExists($this->password)){
+            //if username and/or password already exists, return false
+            if ($this->ifUsernameExists() || $this->ifPasswordExists() || $this->ifEmailExists()){
                 return false;
             }else{
                 if ($this->insertUser()){
@@ -57,24 +58,23 @@
             }
         }
 
-        private function ifUsernameExists($username){
+        private function ifUsernameExists(){
             $stmt = $this->conn->prepare(self::CHECK_USERNAME_QUERY);
             $stmt->bind_param("s",$this->username);
             $stmt->execute();
-
+            $stmt->store_result();
             if ($stmt->num_rows > 0) {
                 return true;
-            }else{
-                return false;
             }
+            return false;
         }
 
-        private function ifPasswordExists($password){
-            $hashed_password = $this->hashPassword($password);
+        private function ifPasswordExists(){
+            $hashed_password = $this->hashPassword();
             $stmt = $this->conn->prepare(self::CHECK_PASSWORD_QUERY);
             $stmt->bind_param("s",$hashed_password);
             $stmt->execute();
-
+            $stmt->store_result();
             if ($stmt->num_rows > 0){
                 return true;
             }else{
@@ -84,8 +84,19 @@
             }
         }
 
-        private function hashPassword($password){
-            $hashed_password = password_hash($password,PASSWORD_DEFAULT);
+        private function ifEmailExists(){
+            $stmt = $this->conn->prepare(self::CHECK_EMAIL_QUERY);
+            $stmt->bind_param("s",$this->email);
+            $stmt->execute();
+            $stmt->store_result();
+            if ($stmt->num_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
+        private function hashPassword(){
+            $hashed_password = password_hash($this->password,PASSWORD_DEFAULT);
             return $hashed_password;
         }
 
